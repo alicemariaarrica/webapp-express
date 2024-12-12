@@ -10,6 +10,8 @@ abstract text DEFAULT NULL,
 image varchar(255) DEFAULT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp(),
 updated_at timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE
+
+
 reviews table
 id int(11) NOT NULL AUTO_INCREMENT,
 movie_id int(11) NOT NULL,
