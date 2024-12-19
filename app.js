@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const movieRoutes = require('./routes/movieRoutes');
 const movieController = require('./controllers/movieController');
+const { handle404, handle505 } = require('./middleware/errorMiddleware')
 
 
 const app = express();
@@ -16,7 +17,7 @@ app.use(movieRoutes);
 
 // Rotta di default
 app.get('/', (req, res) => {
-    res.send('Benvenuti nell\'app di gestione film!');
+    res.send('Benvenuti nella app di gestione film!');
 });
 
 // Gestione errori 404
